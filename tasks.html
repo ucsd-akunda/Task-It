@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "UTC-8">
+  <meta name = "viewpoint" content = "disth=device-width, initial-scale = 1.0">
+  <link href = "css/bootstrap.min.css" rel="stylesheet">
+  <link href = "css/bootstrap-theme.min.css" rel = "stylesheet">
+  <link href = "css/tasks.css" rel="stylesheet">
+ </head>
+
+<body>
+	<!-- This is just a place holder for where the app name will be-->
+      <div class = "jumbotron">
+          <h2 style = "text-align:center"> Task It </h2>
+      </div>
+
+
+      <!--BEGINNING OF NAVBAR CODE PLACE WITHIN YOUR DIV CONTAINER CLASS-->
+      <div class="navbar navbar-default row"> 
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+          <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id ="collapse">
+        <ul class="nav nav-pills nav-justified">
+          <li><a href="#"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+
+          <li class="active"><a href="#"><span class="glyphicon glyphicon-tasks"> Tasks <span class="badge">3</span></span></a></li>
+
+          <li><a href="#"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
+
+          <li><a href="#"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- end of navigation bar -->
+
+			<div class="container">
+
+			<!--START OF TO DO TASKS MODULE -->
+				<div class = "row">
+					<div class = "col-xs-12 ">
+						<h2> To Do </h2>
+						<div class="well" >
+        		<ul class="list-group checked-list-box">
+        			<div>
+                  <li class="list-group-item"> Task 1 <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
+                  <button class = "edit item btn btn-default btn-xs pull-right" ><span class = "glyphicon glyphicon-edit"></span></button></li>
+
+              </div>
+              <div>
+
+                  <li class="list-group-item" > Task 1
+                   <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
+                   <button class = "edit item btn btn-default btn-xs pull-right" ><span class = "glyphicon glyphicon-edit"></span></button> </li>
+
+              </div>
+              <div>
+              	<li class="list-group-item"> Task 1 <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
+
+              	<button class = "edit item btn btn-default btn-xs pull-right" ><span class = "glyphicon glyphicon-edit"></span></button></li>
+              </div>
+                  
+                </ul>
+
+                <div class = "addTask" style = "text-align:center">
+               <!-- Trigger/Open the add task modal -->
+               	<button id="addBtn"> Add task </button>
+				<!-- When open the add task modal -->
+					<div id = "addModal" class = "modal">
+
+						<!-- open add modal content -->
+						<div class = "add-modal-content">
+							<div id = "closemodal" style = "text-align:right">
+							<span class="glyphicon glyphicon-remove-circle" ></span> 
+						    </div>
+							<h4> New Task </h4>
+							<p> Here is were user will input task </p>
+							<span class = "add"> Add </span>  
+							
+						</div>
+					</div> 
+            </div>
+				</div>
+			</div>
+		</div>
+		<!-- ENDS OF TO DO MODULE -->
+
+			<!--START OF DONE TASKS MODULE -->
+			<div class = "row">
+				<div class = "col-xs-12">
+					<h2> Done </h2>
+					<div class = "well">
+						<ul class="list-group checked-list-box">
+        			<div>
+                  <li class="list-group-item" style = "text-decoration: line-through" data-style="button"> Task 1 <button class= "remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove-sign"></span></button></li> 
+			       
+          		</ul>
+				</div>
+				</div>
+				</div>
+			<!-- END OF DONE TASK MODULE-->
+</div>
+
+
+<!--jQuery needed for javascript within bootstrap to work -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <!--declare javascript right near end of body so all HTML elements can load faster first -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src= "js/tasks.js"></script>
+</body>
+
+</html>
