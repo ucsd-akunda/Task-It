@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name = "viewport" content = "disth=device-width, initial-scale = 1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<header class="row">
+			<div class="col-xs-12">
+				<!--<img src="http://extraincomeover55.com/wp-content/uploads/2014/06/EIO55-Got-it-done-opt.jpg" HEIGHT = "100" class="img-responsive center-block">-->
+				<img src="http://www.clker.com/cliparts/z/g/U/q/e/l/check-mark-hi.png" alt="Responsive image" class="img-circle" class="img-responsive">
+			</div>
+
+		</header>
+
+		<div class="navbar navbar-default row"> <!--BEGINNING OF NAVBAR CODE PLACE WITHIN YOUR DIV CONTAINER CLASS-->
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id ="collapse">
+				<ul class="nav nav-pills nav-justified">
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+
+					<li><a href="#"><span class="glyphicon glyphicon-tasks"> Tasks <span class="badge">3</span></span></a></li>
+
+					<li><a href="#"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
+
+					<li><a href="#"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
+				</ul>
+			</div>
+		</div><!-- END OF NAVBAR CODE-->
+
+		<div>
+			<table class="table table-hover">
+				
+				<thead>
+					<tr>
+						<th>Subject #1</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Completed</td>
+						<td>
+							<div class="progress">
+  								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> 60%
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-hover">
+				
+				<thead>
+					<tr>
+						<th>Subject #2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Completed</td>
+						<td>
+							<div class="progress">
+  								<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"> 10%
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table table-hover">
+				
+				<thead>
+					<tr>
+						<th>Subject #3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Completed</td>
+						<td>
+							<div class="progress">
+  								<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"> 50%
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<button type="button" class="btn btn-primary">Add Task</button>
+	</div>
+	
+	<!--jQuery needed for javascript within bootstrap to work -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<!--declare javascript right near end of body so all HTML elements can load faster first -->
+	<script src="js/bootstrap.min.js"></script>	
+</body>
+</html>
