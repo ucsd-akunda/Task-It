@@ -4,15 +4,19 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name = "viewport" content = "disth=device-width, initial-scale = 1.0">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <script src="js/feed.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/custom.css">
+    
 </head>
 <body>
+
     <div class="container">
+        <div class = "jumbotron">
+          <h2 style = "text-align:center"> Task It </h2>
+     </div>
 		<header class="row">
-			<div class="col-xs-12">
-				<img src="http://extraincomeover55.com/wp-content/uploads/2014/06/EIO55-Got-it-done-opt.jpg" HEIGHT = "100" class="img-responsive center-block">
+		
 		</header>
 
 		<div class="navbar navbar-default row"> <!--BEGINNING OF NAVBAR CODE PLACE WITHIN YOUR DIV CONTAINER CLASS-->
@@ -27,13 +31,13 @@
 
 			<div class="collapse navbar-collapse" id ="collapse">
 				<ul class="nav nav-pills nav-justified">
-					<li><a href="#"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+					<li><a href="/"><span class="glyphicon glyphicon-home"> Home</span></a></li>
 
-					<li><a href="#"><span class="glyphicon glyphicon-tasks"> Tasks <span class="badge">3</span></span></a></li>
+					<li><a href="/tasks"><span class="glyphicon glyphicon-tasks"> Tasks <span class="badge">3</span></span></a></li>
 
-					<li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
+					<li class="active"><a href="/feed"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
 
-					<li><a href="#"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
+					<li><a href="/groups1"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -94,10 +98,13 @@
 	</div>
 
 	<!--jQuery needed for javascript within bootstrap to work -->
+
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
 	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 	  crossorigin="anonymous"></script>
 	<!--declare javascript right near end of body so all HTML elements can load faster first -->
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-
 	<script src="js/bootstrap.min.js"></script>
+    <script src="js/feed.js"></script> 
 </body>
 </html>
