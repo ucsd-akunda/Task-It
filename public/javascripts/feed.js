@@ -1,3 +1,7 @@
+if (typeof jQuery === 'undefined') {
+	throw new Error('This file requires jQuery');
+}
+
 $(document).ready(function() {
 	$('.post')
 	.mouseover(function(e) {

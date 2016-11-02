@@ -1,101 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<meta name = "viewport" content = "disth=device-width, initial-scale = 1.0">
-    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="/stylesheets/custom.css">
-</head>
-<body>
-    <div class="container">
-		<header class="row">
-			<div class="col-xs-12">
-                <img src="http://extraincomeover55.com/wp-content/uploads/2014/06/EIO55-Got-it-done-opt.jpg" HEIGHT = "100" class="img-responsive center-block">
-            </div>
-		</header>
+<!-- sorta ugly looking feed -->
+<ul id="main-feed">
+    <li class="post">
+        <div class="post-person">
+            <a class="post-person-profilelink" href="javascript:void(0);">
+                <img class="profile-avatar" src="images/stock1.jpg">
+                <strong class="profile-name">John Doe</strong>
+            </a>
+        </div>
+        <div class="post-text">
+            <p>
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+    </li>
+    <li class="post">
+        <div class="post-person">
+            <a class="post-person-profilelink" href="javascript:void(0);">
+                <img class="profile-avatar" src="images/stock1.jpg">
+                <strong class="profile-name">John Doe</strong>
+            </a>
+        </div>
+        <div class="post-text">
+            <p>
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+    </li>
+    <li class="post">
+        <div class="post-person">
+            <a class="post-person-profilelink" href="javascript:void(0);">
+                <img class="profile-avatar" src="images/stock1.jpg">
+                <strong class="profile-name">John Doe</strong>
+            </a>
+        </div>
+        <div class="post-text">
+            <p>
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+    </li>
+</ul>
+<!-- IMPLEMENT FEED WITH HANDLEBARS LATER 
+<ul id="main-feed">
+    {{#each post}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+-->
 
-		<div class="navbar navbar-default row"> <!--BEGINNING OF NAVBAR CODE PLACE WITHIN YOUR DIV CONTAINER CLASS-->
-
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
-					<span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-				</button>
-			</div>
-
-			<div class="collapse navbar-collapse" id ="collapse">
-				<ul class="nav nav-pills nav-justified">
-					<li><a href="/"><span class="glyphicon glyphicon-home"> Home</span></a></li>
-
-					<li><a href="tasks"><span class="glyphicon glyphicon-tasks"> Tasks <span class="badge">3</span></span></a></li>
-
-					<li class="feed"><a href="#"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
-
-					<li><a href="groups1"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
-				</ul>
-			</div>
-		</div>
-        <!-- END OF NAVBAR CODE-->
-
-        <!-- sorta ugly looking feed -->
-        <ul id="main-feed">
-            <li class="post">
-                <div class="post-person">
-                    <a class="post-person-profilelink" href="javascript:void(0);">
-                        <img class="profile-avatar" src="images/stock1.jpg">
-                        <strong class="profile-name">John Doe</strong>
-                    </a>
-                </div>
-                <div class="post-text">
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                    </p>
-                </div>
-            </li>
-            <li class="post">
-                <div class="post-person">
-                    <a class="post-person-profilelink" href="javascript:void(0);">
-                        <img class="profile-avatar" src="images/stock1.jpg">
-                        <strong class="profile-name">John Doe</strong>
-                    </a>
-                </div>
-                <div class="post-text">
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                    </p>
-                </div>
-            </li>
-            <li class="post">
-                <div class="post-person">
-                    <a class="post-person-profilelink" href="javascript:void(0);">
-                        <img class="profile-avatar" src="images/stock1.jpg">
-                        <strong class="profile-name">John Doe</strong>
-                    </a>
-                </div>
-                <div class="post-text">
-                    <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                    </p>
-                </div>
-            </li>
-        </ul>
-        <!-- IMPLEMENT FEED WITH HANDLEBARS LATER 
-		<ul id="main-feed">
-            {{#each post}}
-                <li>{{this}}</li>
-            {{/each}}
-		</ul>
-        -->
-
-	</div>
-
-	<!--jQuery needed for javascript within bootstrap to work -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-	  crossorigin="anonymous"></script>
-	<!--declare javascript right near end of body so all HTML elements can load faster first -->
-	<script src="javascripts/bootstrap.min.js"></script>
-</body>
-</html>
+<script src="/javascripts/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="/javascripts/feed.js"></script>
