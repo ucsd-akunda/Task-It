@@ -1,12 +1,26 @@
 <!-- boxes where they will be able to go to groups   --> 
 <div class="container" style= "text-align: center">  
+
+
    <h5>View your groups here </h5>
+
+
+{{#each groups}}
     <div class="col-md-4 ">
         <div class="col-md-12 well">
-            Group Name
-        <img src="http://placehold.it/140x80">
+            {{groupName}}
+            <img class="groupPicture" src={{groupPic}} >
+         
         </div>
     </div>
+
+{{/each}}
+
+
+
+
+
+<!--
     <div class="col-md-4 ">
         <div class="col-md-12 well">
             Group Name
@@ -31,7 +45,7 @@
             <img src="http://placehold.it/140x80">
         </div>
     </div>
-  </div>
+  </div> --> 
 
 <!-- end of groups module-->
 
