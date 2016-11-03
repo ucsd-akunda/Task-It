@@ -1,28 +1,33 @@
-			<div class="container">
-
-			<!--START OF TO DO TASKS MODULE -->
-				<div class = "row">
+<div class = "row">
 					<div class = "col-xs-12 ">
 						<h2> To Do </h2>
-						<div class="well" >
+						
         		<ul class="list-group checked-list-box">
-        			<div>
-                  <li class="list-group-item"> Task 1 <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
+
+    <div class="panel panel-warning">
+    	
+  		<div class="panel-heading">
+    		<h3 class="panel-title">{{subject}}</h3>
+  		</div>
+  		<!--beginning of for each loop -->
+  		{{#each cogs}}
+ 		<div class="panel-body">
+    		<div>
+                  <li class="list-group-item"> {{task}}<button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
                   <button class = "edit item btn btn-default btn-xs pull-right" ><span class = "glyphicon glyphicon-edit"></span></button></li>
 
               </div>
-              <div>
+    		
+ 		</div>
+ 		{{/each}} <!--end of for each loop -->
+ 	</div>
+ 	
 
-                  <li class="list-group-item" > Task 1
-                   <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
-                   <button class = "edit item btn btn-default btn-xs pull-right" ><span class = "glyphicon glyphicon-edit"></span></button> </li>
-
-              </div>
-              <div>
-              	<li class="list-group-item"> Task 1 <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
-
-              	<button class = "edit item btn btn-default btn-xs pull-right" ><span class = "glyphicon glyphicon-edit"></span></button></li>
-              </div>
+ 	<hr>
+        		
+              
+          
+              
                   
                 </ul>
 
@@ -30,16 +35,53 @@
                <!-- Trigger/Open the add task modal -->
                	<button id="addBtn"> Add task </button>
 				<!-- When open the add task modal -->
-					<div id = "addModal" class = "modal">
+					<div id="addModal" class="modal">
 
 						<!-- open add modal content -->
-						<div class = "add-modal-content">
-							<div id = "closemodal" style = "text-align:right">
+						<div class="add-modal-content">
+							<div id="closemodal" style = "text-align:right">
 							<span class="glyphicon glyphicon-remove-circle" ></span> 
 						    </div>
-							<h4> New Task </h4>
-							<p> Here is were user will input task </p>
-							<span class = "add"> Add </span>  
+
+							<div>
+								
+								<form id="addFriendForm" role="form" method="get" action="/add"> <!--FORM Start-->
+									<h3>Add a Task</h3>
+	   								 <div class="form-group">
+	      								<label for="task">Task:</label>
+
+	     							 <input required type="text" class="form-control" id="name" placeholder="Name" name="task">
+
+	    							 </div>
+
+	    							<div class="form-group">
+
+	      								<label for="due date">Due Date:</label>
+
+	     							 <input type="text" class="form-control" id="description" placeholder="Due Date" name="dueDate">
+	   							 </div>
+
+	   							  <div class="form-group">
+	      								<label for="email">Email:</label>
+
+	     							 <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+
+	    						</div>
+
+	    						 <div class="form-group">
+	      							<label for="priority">Priority: </label>
+	      								<p>High, Medium, Low</p>
+	     							 <input type="text" class="form-control" id="priority" placeholder="Priority" name="priority">
+
+	    							 </div>
+									
+	   								 <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
+
+								</form><!--FORM END-->
+
+
+							</div>
+							
 							
 						</div>
 					</div> 
@@ -56,11 +98,11 @@
 					<div class = "well">
 						<ul class="list-group checked-list-box">
         			<div>
-                  <li class="list-group-item" style = "text-decoration: line-through" data-style="button"> Task 1 <button class= "remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove-sign"></span></button></li> 
+                  <li class="list-group-item" style="text-decoration: line-through" data-style="button"> Task 1 <button class= "remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove-sign"></span></button></li> 
 			       
           		</ul>
 				</div>
+				
 				</div>
-				</div>
-			<!-- END OF DONE TASK MODULE-->
-</div>
+				
+				
