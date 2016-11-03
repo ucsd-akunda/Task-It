@@ -20,7 +20,8 @@ exports.addTask = function(req, res) {
  	if(req.query.task)
  		data.cogs.push(newTask);
 
- 	res.render('tasks', data);
+ 	// res.render('tasks', data);
+ 	res.redirect('/tasks');
 	
  
   console.log("yay, addTask just ran!");
