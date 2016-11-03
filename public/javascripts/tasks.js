@@ -5,12 +5,14 @@ var modal = document.getElementById('addModal');
 var btn = document.getElementById('addBtn');
 
 var closemodal = document.getElementById('closemodal');
+var donelist = document.getElementById('donelist');
 
 $('.list-group-item').click(deleteItem);
 
 function deleteItem(event){
 	console.log(event);
-	$(event.target).fadeOut();
+	// $(event.target).fadeOut();
+	$(donelist).append(event.target);
 }
 
 // When the user clicks on the button, open the modal 
