@@ -3,6 +3,7 @@ if (typeof jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
+
 	$('.post')
 	.mouseover(function(e) {
 		e.preventDefault();
@@ -10,5 +11,11 @@ $(document).ready(function() {
 	})
 	.mouseout(function(e) {
 		$(this).css('border-left-color', '');
+	})
+
+	$(window).scroll(function() {
+		if($(document).height() <= $(window).scrollTop() + $(window).height()) {
+			console.log("End of Page!!");
+		}
 	})
 })
