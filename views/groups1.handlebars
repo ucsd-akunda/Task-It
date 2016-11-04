@@ -2,7 +2,7 @@
 <div class="container" style= "text-align: center">  
 
 
-   <h5>View your groups here </h5>
+   <h5>Your Groups </h5>
 
 
 {{#each groups}}
@@ -13,47 +13,35 @@
          
         </div>
     </div>
-
 {{/each}}
 
 
-
-
-
-<!--
-    <div class="col-md-4 ">
-        <div class="col-md-12 well">
-            Group Name
-            <img src="http://placehold.it/140x80">
-        </div>
-    </div>
-    <div class="col-md-4 ">
-        <div class="col-md-12 well">
-            Group Name
-            <img src="http://placehold.it/140x80">
-        </div>
-    </div>
-     <div class="col-md-4 ">
-        <div class="col-md-12 well">
-            Group Name
-            <img src="http://placehold.it/140x80">
-        </div>
-    </div>
-     <div class="col-md-4 ">
-        <div class="col-md-12 well">
-            Group Name
-            <img src="http://placehold.it/140x80">
-        </div>
-    </div>
-  </div> --> 
 
 <!-- end of groups module-->
 
 <!-- add group button, delete group button -->
 <div>
-  <p style = "text-align: center">
-  <button type="button" class="btn btn-primary btn-lg">Add Group</button>
+    <!-- add group button-->
+  <button class="btn btn-default" id = "addbtn">Add Group</button>
+  <!-- modal when you "add group"-->
+      <div id="groupmodal" class="modal">
+         <!-- modal content-->
+            <div class="group-modal-content">
+                 <form id = "add group form">
+
+                    <label id="groupName"> Group Name </label>
+                    <input required type="text" class="form-control" id="name" placeholder="Group Name" name="group-name">
+
+                    
+                 </form>
+             </div>
+    </div>
+
+                            
+
+
   <button type = "button" class = "btn btn-primary btn-lg"> Delete Group</button>
 </p>
+</div>
 </div>
 <!-- end of button -->
