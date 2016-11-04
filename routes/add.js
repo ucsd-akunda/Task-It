@@ -1,4 +1,4 @@
-var data = require("../taskdata.JSON");
+var data = require("../taskdata.json");
 
 
 exports.addTask = function(req, res) {
