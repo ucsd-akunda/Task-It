@@ -1,7 +1,7 @@
 var data = require('../profiles.json');
 
 exports.personInfo = function(req, res) {
-	console.log("\nAM INSIDE THE INFO FUNCTION\n");
+	
 	var name = req.params.username;
 	var person;
 
