@@ -13,6 +13,7 @@ var add = require('./routes/add');
 var tasks = require('./routes/tasks');
 var groups1 = require('./routes/groups1');
 var feed = require('./routes/feed');
+var profile = require('./routes/profile');
 
 
 var app = express();
@@ -43,6 +44,7 @@ app.get('/add', add.addTask);
 
 app.get('/groups1', groups1.view);
 app.get('/feed', feed.view);
+app.get('/profile/:name', profile.personInfo);
 
 
 // app.get('/groups1', function(req, res, next) {

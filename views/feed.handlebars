@@ -1,10 +1,12 @@
+<button type="button" class="btn btn-sm btn-primary" style="text-align: right;">Add Friend</button>
+
 <!-- sorta ugly looking feed -->
 <ul id="main-feed">
 
     {{#each posts}}
     <li class="post">
         <div class="post-person">
-            <a class="post-person-profilelink" href="javascript:void(0);">
+            <a class="post-person-profilelink" href="{{link}}">
                 <img class="profile-avatar" src={{profilepic}}>
                 <strong class="profile-name">{{name}}</strong>
             </a>
