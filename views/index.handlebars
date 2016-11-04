@@ -1,63 +1,54 @@
-<div>
-
-	<div>
-		<table class="table table-hover">
-			
-			<thead>
-				<tr>
-					<th>{{subject1}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Completed</td>
-					<td>
-						<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> 60%
-							</div>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<table class="table table-hover">
-			
-			<thead>
-				<tr>
-					<th>{{subject2}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Completed</td>
-					<td>
-						<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"> 10%
-							</div>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<table class="table table-hover">
-			
-			<thead>
-				<tr>
-					<th>{{subject3}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Completed</td>
-					<td>
-						<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"> 50%
-							</div>
-						</div>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+<div class = "jumbotron">
+	
+	<div col-md-8> 
+		<h3 style = "text-align:center"> Hello, John Doe </h3>
 	</div>
-	<button type="button" class="btn btn-primary">Add Task</button>
+	<hr>
+		<div id="upcoming" class="panel panel-default">
+
+  				<div class="panel-heading">
+    				<h3 class="panel-title">Upcoming Tasks</h3>
+  			    </div>
+  			    {{#each upcoming}}
+			 <div class="panel-body">
+			 	<ul class = "upcoming-list well" > {{taskname}} </ul>
+			 </div>	
+			 {{/each}}
+		</div>
+
+	<div id = "friends" class = "panel panel-default">
+		<div class = "panel-heading">
+			<h3 class = "panel-title"> Top Scores <h3>
+			</div>
+			<div class = "panel-body">
+				<div class = "thumbnail">
+					<p> Friend 1 </p>
+				</div>
+				<div class = "panel-footer" >
+					<div style = "text-align:right">
+					<button type = "add-friend" class = "btn btn-default" id = "add-friend" >Add Friends</button>
+				</div>
+						<div id = "friend-modal" class = "modal">
+							<div class = "friend-modal-content">
+
+								<div id="closemodal" style = "text-align:right">
+							<span class="glyphicon glyphicon-remove-circle" ></span> 
+						    </div>
+
+							<div id = "friend form">
+								<label class = "search"> Find Friends </label>
+								 <input required type="text" class="form-control" id="search-friend" placeholder="username" name="search-friend">
+
+								<button class = "btn btn-default" id = "add"> Add </button>
+
+                    		</div>
+            				</div>
+            		</div>
+    			</div>
+				</div> 
+			</div>
 </div>
+	
+
+
+

@@ -1,10 +1,12 @@
+<button type="button" class="btn btn-sm btn-primary" style="text-align: right;">Add Friend</button>
+
 <!-- sorta ugly looking feed -->
 <ul id="main-feed">
 
     {{#each posts}}
     <li class="post">
         <div class="post-person">
-            <a class="post-person-profilelink" href="javascript:void(0);">
+            <a class="post-person-profilelink" href="{{link}}">
                 <img class="profile-avatar" src={{profilepic}}>
                 <strong class="profile-name">{{name}}</strong>
             </a>
@@ -12,8 +14,8 @@
         <div class="post-text">
             <p>
                 {{text}}
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
             </p>
+            <a class="btn btn-xs btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> Like!</a>
         </div>
     </li>
     {{/each}}
