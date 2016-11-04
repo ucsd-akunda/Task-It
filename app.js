@@ -13,6 +13,7 @@ var add = require('./routes/add');
 var tasks = require('./routes/tasks');
 var groups1 = require('./routes/groups1');
 var feed = require('./routes/feed');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -33,7 +34,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ROUTES
+
+app.get('/login', login.view);
+
 app.get('/', index.view);
+
 // app.get('/users', users.view);
 app.get('/tasks', tasks.view);
 // app.use('/feed', feed);
