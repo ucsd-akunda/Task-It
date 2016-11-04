@@ -1,5 +1,5 @@
-var data = require('../taskdata.json');
+var data = require('../data.json');
 
 exports.view = function(req, res){
-	res.render('index', data);
+	res.render('index', data.indexData);
 };
