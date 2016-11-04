@@ -1,19 +1,18 @@
 if (typeof jQuery === 'undefined') {
-	throw new Error('This file requires jQuery');
+    throw new Error('This file requires jQuery');
 }
 
 $(document).ready(function() {
+    $('.post')
+        .mouseover(function(e) {
+            e.preventDefault();
+            $(this).css('border-left-color', 'aliceblue');
+        })
+        .mouseout(function(e) {
+            $(this).css('border-left-color', '');
+        })
 
-	$('.post')
-	.mouseover(function(e) {
-		e.preventDefault();
-		$(this).css('border-left-color', 'aliceblue');
-	})
-	.mouseout(function(e) {
-		$(this).css('border-left-color', '');
-	})
-
-	var posttext = '<li class="post"> \
+    var posttext = '<li class="post"> \
         <div class="post-person"> \
             <a class="post-person-profilelink" href="javascript:void(0);"> \
                 <img class="profile-avatar" src="http://lorempixel.com/500/500/people/"> \
@@ -27,9 +26,9 @@ $(document).ready(function() {
             <a class="btn btn-xs btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> Like!</a> \
         </div> \
     </li>'
-	$(window).scroll(function() {
-		if($(document).height() <= $(window).scrollTop() + $(window).height()) {
-			$('#main-feed').append(posttext);
-		}
-	})
+    $(window).scroll(function() {
+        if ($(document).height() <= $(window).scrollTop() + $(window).height()) {
+            $('#main-feed').append(posttext);
+        }
+    })
 })

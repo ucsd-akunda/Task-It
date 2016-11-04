@@ -19,7 +19,7 @@
 			"text": "Completed 5 tasks!",				
 			"profilepic": "images/stock3.jpg",
 			"link": "profile/jane",
-			"score": 34
+			"score": 3445
 		},
 		{
 			"name": "John Baker",
@@ -40,7 +40,7 @@
 			"text": "Ate a whole pie!",				
 			"profilepic": "images/stock1.jpg",
 			"link": "profile/jane",
-			"score": 100000
+			"score": 1
 		}
 	]
 }
