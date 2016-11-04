@@ -2,9 +2,17 @@
 	"indexData": {
 		"title": "Home",
 		"indexChosen": "active",
-		"subject1": "Class 1",
-		"subject2": "Class 2",
-		"subject3": "Class 3"
+		"upcoming":[
+			{
+				"taskname": "Cogs Midterm Monday"
+			},
+			{
+				"taskname" : "Cogs 101A - Read Chapter 11 "
+			},
+			{
+				"taskname" : "Outline for essay"
+			}
+		]
 	},
 	"tasksData": {
 		"title": "Tasks",

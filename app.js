@@ -14,6 +14,7 @@ var tasks = require('./routes/tasks');
 var groups1 = require('./routes/groups1');
 var feed = require('./routes/feed');
 
+
 var app = express();
 
 // view engine setup
@@ -42,6 +43,7 @@ app.get('/add', add.addTask);
 
 app.get('/groups1', groups1.view);
 app.get('/feed', feed.view);
+
 
 // app.get('/groups1', function(req, res, next) {
   // res.render('groups1', data.groupsData);
