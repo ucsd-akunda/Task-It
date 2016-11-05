@@ -9,7 +9,7 @@
                 <!--beginning of for each loop -->
                 <div class="panel-body">
                     <div class="testing">
-                    	{{#each cogs}}
+                        {{#each cogs}}
                         <li class="list-group-item"> {{task}}
                             <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
                             <button class="edit item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-edit"></span></button>
@@ -39,11 +39,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="due date">Due Date:</label>
-                                    <input type="text" class="form-control" id="description" placeholder="Due Date" name="dueDate">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="text" class="form-control" id="email" placeholder="Email" name="email">
+                                    <input type="text" class="flatpickr form-control" id="datepicker" placeholder="Due Date" name="dueDate">
                                 </div>
                                 <div class="form-group">
                                     <label for="priority">Priority: </label>

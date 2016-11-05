@@ -4,6 +4,7 @@ var feed = require('../feed.json');
 
 var topPerson = {score: 0};
 
+
 feed.posts.forEach(function(post){
 	if(post.score > topPerson.score)
 		topPerson = post;

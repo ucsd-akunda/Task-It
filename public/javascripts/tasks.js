@@ -10,10 +10,10 @@ var donelist = document.getElementById('donelist');
 //$('.list-group-item').click(deleteItem);
 $('.testing').click(deleteItem);
 
-function deleteItem(event){
-	console.log(event);
-	// $(event.target).fadeOut();
-	$(donelist).append(event.target);
+function deleteItem(event) {
+    console.log(event);
+    // $(event.target).fadeOut();
+    $(donelist).append(event.target);
 }
 
 // When the user clicks on the button, open the modal 
@@ -21,13 +21,26 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
-closemodal.onclick = function(){
-	modal.style.display = "none";
-}
-/* // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+closemodal.onclick = function() {
         modal.style.display = "none";
-    } 
-} */
+    }
+    /* // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        } 
+    } */
+$(function() {
+    $("#datepicker").datepicker();
+});
 
+$(function() {
+    $('#datetimepicker1').datetimepicker();
+});
+
+$(function() {
+    $(".flatpickr").flatpickr({
+    // disable opening calendar by clicking on input
+    	dateFormat: "m-d-Y"
+    });
+});
