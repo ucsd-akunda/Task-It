@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>{{title}}</title>
-	<meta name = "viewport" content = "disth=device-width, initial-scale = 1.0">
-	
-	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-	<link rel="stylesheet" href="/stylesheets/customKyle.css">
-	<link rel="stylesheet" href="/stylesheets/style.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/custom.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/tasks.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/groups1.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
-	<link rel="stylesheet"  href="/stylesheets/flatpickr.min.css">
-</head> 
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="disth=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/customKyle.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/custom.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/tasks.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/groups1.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/flatpickr.min.css">
+</head>
+
 <body>
-<div class = "jumbotron">
-          <h2 style = "text-align:center"> Task It </h2>
-      </div>
-
-    <div class="navbar navbar-default row"> <!--BEGINNING OF NAVBAR CODE PLACE WITHIN YOUR DIV CONTAINER CLASS-->
-
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
-					<span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-				</button>
-			</div>
-
-			<div class="collapse navbar-collapse" id ="collapse">
-				<ul class="nav nav-pills nav-justified">
-					<li class={{indexChosen}}><a href="/"><span class="glyphicon glyphicon-home"> Home</span></a></li>
-
-					<li class={{tasksChosen}}><a href="/tasks"><span class="glyphicon glyphicon-tasks"> Tasks <span class="badge">{{taskData.cogs.length}}</span></span></a></li>
-
-					<li class={{feedChosen}}><a href="/feed"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
-
-					<li class={{groupsChosen}}><a href="/groups1"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
-				</ul>
-			</div>
-		</div><!-- END OF NAVBAR CODE-->
-	<div class="container">
-		<header class="row">
-			
-			<div><p></p></div>
-
-		</header>
-
-		
-		{{{body}}}
-	</div>
-	
-	<!--jQuery needed for javascript within bootstrap to work -->
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-	  crossorigin="anonymous"></script>
-	
-	<!--declare javascript right near end of body so all HTML elements can load faster first -->
-	<script src="javascripts/bootstrap.min.js"></script>
-	<script src="javascripts/tasks.js"></script>
-	<script src="javascripts/groups1.js"></script>	
-	<script src="javascripts/index.js"></script>	
-	<script src="javascripts/flatpickr.min.js"></script>
-
+    <div class="jumbotron">
+        <h2 style="text-align:center"> Task It </h2>
+    </div>
+    <div class="navbar navbar-default row">
+        <!--BEGINNING OF NAVBAR CODE PLACE WITHIN YOUR DIV CONTAINER CLASS-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="collapse">
+            <ul class="nav nav-pills nav-justified">
+                <li class={{indexChosen}}><a href="/"><span class="glyphicon glyphicon-home"> Home</span></a></li>
+                <li class={{tasksChosen}}><a href="/tasks"><span class="glyphicon glyphicon-tasks"> Tasks 
+                	<!--If no tasks (length === 0), then no badge will show. At least one task needed to show badge -->
+                	{{#if taskData.cogs.length}}<span class="badge">{{taskData.cogs.length}}</span>{{/if}}
+                </span></a></li>
+                <li class={{feedChosen}}><a href="/feed"><span class="glyphicon glyphicon-list-alt"> Feed</span></a></li>
+                <li class={{groupsChosen}}><a href="/groups1"><span class="glyphicon glyphicon-user"> Groups</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END OF NAVBAR CODE-->
+    <div class="container">
+        <header class="row">
+            <div>
+                <p></p>
+            </div>
+        </header>
+        {{{body}}}
+    </div>
+    <!--jQuery needed for javascript within bootstrap to work -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <!--declare javascript right near end of body so all HTML elements can load faster first -->
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/tasks.js"></script>
+    <script src="javascripts/groups1.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/flatpickr.min.js"></script>
 </body>
+
 </html>
