@@ -7,7 +7,7 @@ exports.personInfo = function(req, res) {
 
 	for (var i = 0; i < data.length; i++) {
 		if (data[i].username == req.params.name) {
-			console.log(i, "\t", data[i]);
+			// console.log(i, "\t", data[i]);
 			person = data[i];
 		}
 	}

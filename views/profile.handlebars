@@ -61,20 +61,26 @@ Licensed under MIT
         </div>
         <div class="col-md-9">
             <div class="profile-content">
-                <ul class="profile-content-list">
-                    {{#each todo}}
-                    <li>
-                        {{this}}
-                    </li>
-                    {{/each}}
-                </ul>
-                <ul class="profile-content-list">
-                    {{#each complete}}
-                    <li>
-                        {{this}}
-                    </li>
-                    {{/each}}
-                </ul>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">To-Do</div>
+                    <ul class="list-group">
+                        {{#each todo}}
+                        <li class="list-group-item">
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">Done</div>
+                    <ul class="list-group">
+                        {{#each complete}}
+                        <li class="list-group-item">
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
