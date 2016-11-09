@@ -5,6 +5,13 @@ var feed = require('../feed.json');
 var topPerson = {score: 0};
 
 
+// Write the callback function
+function handleFile(err, data) {
+    if (err) throw err
+    obj = JSON.parse(data)
+    // You can now play with your datas
+}
+
 feed.posts.forEach(function(post){
 	if(post.score > topPerson.score)
 		topPerson = post;

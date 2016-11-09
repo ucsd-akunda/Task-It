@@ -27,3 +27,26 @@ function sortDescending(a, b) {
 $(document).ready(function() {
     $('#all_elements .element').sort(sortDescending).appendTo('#all_elements');
 });
+
+
+
+//to see index of task array (seems to be gettiung )someArray.splice(x,1);
+$(document).ready(function() {
+    var index = $('.task-name').index(this);
+    $('.task-name').click(function() {
+        $('#out').append('<p>' + $('.task-name').index(this) + '</p>');
+        $('.task-name').splice(index,1);
+    });
+});
+
+/**function priorityColor(a) {
+    var date1 = $(a).find(".year").text();
+    date1 = date1.split('-');
+    date1 = new Date(date1[2], date1[0], date1[1] - 1);
+    var date2 = new Data();
+    
+
+    if(data2 - date1 > 3){
+
+    }
+};**/

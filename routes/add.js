@@ -6,11 +6,9 @@ exports.addTask = function(req, res) {
 
 			"task": req.query.task,
 
+			"subject": req.query.subject,
+
 			"dueDate": req.query.dueDate,
-
-			"email": req.query.email,
-
-			"priority": req.query.priority
 		};
 
 	// Your code goes here
