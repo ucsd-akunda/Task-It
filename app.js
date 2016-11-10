@@ -20,14 +20,16 @@ var loginError = require('./routes/loginError');
 
 var app = express();
 
+var taskData = require('./taskdata.json');
 
-app.locals.taskData = require('./taskdata.json');
 
+app.locals.taskData = taskData;
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'jade');
 
 app.set('views', path.join(__dirname, 'views'));
+app.set('taskData', taskData);
 app.set('view engine', 'handlebars');
 app.engine('.handlebars', exphbs({defaultLayout: 'main'}));
 

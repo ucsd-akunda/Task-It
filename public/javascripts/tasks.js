@@ -1,36 +1,32 @@
-// Get the modal
-var modal = document.getElementById('addModal');
+$('.list-group-item').click(taskButtonActions);
 
-// Get the button that opens the modal
-var btn = document.getElementById('addBtn');
 
-var closemodal = document.getElementById('closemodal');
-var donelist = document.getElementById('donelist');
+$('.edit').click(editItem);
 
-//$('.list-group-item').click(deleteItem);
-$('.testing').click(deleteItem);
+function editItem(){
+    $('#editmodal').modal('show');
+}
 
-function deleteItem(event) {
-    console.log(event);
-    // $(event.target).fadeOut();
-    $(donelist).append(event.target);
+function taskButtonActions(event) {
+    console.log($(event.target));
+    if($(event.target).hasClass('done-btn'))
+        $(event.target.offsetParent).appendTo('#donelist');
+    if($(event.target).hasClass('edit-btn'))
+        $(event.target.offsetParent).find('.edit-modal').fadeToggle();
+
 }
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+$('#add-btn').click(function() {
+    $('#add-modal').fadeToggle();
+});
 
-closemodal.onclick = function() {
-        modal.style.display = "none";
-    }
-    /* // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        } 
-    } */
-
+$('#close-add-modal').click(function() {
+    $('#add-modal').fadeToggle();
+});
+$('.close-edit-modal').click(function() {
+    $('.edit-modal').fadeOut();
+});
 
 $(function() {
     $(".flatpickr").flatpickr({
