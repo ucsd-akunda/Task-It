@@ -1,8 +1,9 @@
-<form>
+
+<form id="loginForm" role="form" method="get" action="/loginSubmit">
     <!--USERNAME-->
     <div class="form-group">
         <div class="input-group email">
-            <input type="text" class="form-control" placeholder="Email Address" id="email">
+            <input type="text" class="form-control" placeholder="Email Address" id="email" name="email">
             <span class="input-group-addon">
             <span class="glyphicon glyphicon-user"></span>
         </div>
@@ -10,13 +11,13 @@
     <!--PASSWORD-->
     <div class="form-group">
         <div class="input-group password">
-            <input type="text" class="form-control" placeholder="Password" id="pwd">
+            <input type="text" class="form-control" placeholder="Password" id="pwd" name="password">
             <span class="input-group-addon">
             <span class="glyphicon glyphicon-lock"></span>
             </span>
         </div>
     </div>
     <!--SUBMIT/RESET BUTTONS-->
-    <a class="btn btn-default" href="/">Submit</a>
-    <button type="reset" class="btn btn-default" id="loginbtm">Reset</button>
+    <input type="submit" id="submitBtn" class="btn btn-default" value="Submit"></input>
+    <input type="submit" id="submitBtn" class="btn btn-default" value="Reset"></input>
 </form>

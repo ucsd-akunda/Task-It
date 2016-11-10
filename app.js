@@ -15,6 +15,8 @@ var groups1 = require('./routes/groups1');
 var feed = require('./routes/feed');
 var login = require('./routes/login');
 var profile = require('./routes/profile');
+var loginSubmit = require('./routes/loginSubmit');
+var loginError = require('./routes/loginError');
 
 var app = express();
 
@@ -41,6 +43,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/login', login.view);
 
+app.get('/loginError', loginError.view);
+
 app.get('/', index.view);
 
 // app.get('/users', users.view);
@@ -52,6 +56,7 @@ app.get('/add', add.addTask);
 app.get('/groups1', groups1.view);
 app.get('/feed', feed.view);
 app.get('/profile/:name', profile.personInfo);
+app.get('/loginSubmit', loginSubmit.loginSub);
 
 
 // app.get('/groups1', function(req, res, next) {
