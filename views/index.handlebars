@@ -40,20 +40,22 @@
                 </div>
                 </div> 
             </div>
-        <div id="upcoming" class="panel panel-default">
-
+        <div id="upcoming" class="panel panel-danger">
                 <div class="panel-heading">
                     <h3 class="panel-title">Upcoming Tasks</h3>
         </div>
         {{#each taskData.cogs}}
         <div id="all_elements">
             <div class="element">
-                <ul class="upcoming-list well">
+
+                        <div class="panel-body">
                     <div class="task-name" style="display:inline-block">{{task}}</div>
                     <div style="text-align:right">Due:</div>
                     <div class="year" style="text-align:right">{{dueDate}}</div>
-                </ul>
+              
+
             </div>
+            <hr>
         </div>
         {{/each}}
         <div id="out">

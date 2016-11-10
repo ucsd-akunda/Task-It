@@ -19,10 +19,54 @@
                                 <div class="year" style="text-align:right">{{dueDate}}</div>
                                
                             </div>
-                            <div class = "btn">
-                              <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle" >DONE</span></button>
-                          </div>
-                            <!-- <button class="edit item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-edit"></span></button>-->
+                            
+                            <button class="done-btn"><span class="glyphicon glyphicon-ok-circle" ></span>DONE</button>
+
+
+                            <button class="edit-btn"><span class="glyphicon glyphicon-edit"></span>EDIT</button>
+                            <div class="modal edit-modal">
+                                <div class="modal-content">
+                                    <div class="close-edit-modal" style="text-align:right">
+                                         <span class="glyphicon glyphicon-remove-circle"></span>
+                                    </div>
+                                    <form role="form" method="get" action="/add">
+                                        <!--FORM Start-->
+                                        <h3>Edit Task</h3>
+                                        <div class="form-group">
+                                            <label for="task">Task:</label>
+                                            <input 
+                                                required 
+                                                type="text" 
+                                                class="form-control" 
+                                                id="name" 
+                                                placeholder="Name"
+                                                value="{{task}}" 
+                                                name="task">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="priority">Subject: </label>
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                id="subject" 
+                                                placeholder="Subject"
+                                                value="{{subject}}"
+                                                name="subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="due date">Due Date:</label>
+                                            <input 
+                                                type="text" 
+                                                class="flatpickr form-control" 
+                                                id="datepicker" 
+                                                placeholder="Due Date"
+                                                value="{{dueDate}}" 
+                                                name="dueDate">
+                                        </div>
+                                        <input type="submit" id="submitBtn" class="btn btn-default" value="Add task"></input>
+                                    </form>
+                                </div>
+                            </div>  
 
                         </li>
                         {{/each}}
@@ -32,34 +76,32 @@
             <!--end of for each loop -->
             <div class="addTask" style="text-align:center">
                 <!-- Trigger/Open the add task modal -->
-                <button id="addBtn"> Add task </button>
+                <button id="add-btn"> Add task </button>
                 <!-- When open the add task modal -->
-                <div id="addModal" class="modal">
+                <div id="add-modal" class="modal">
                     <!-- open add modal content -->
-                    <div class="add-modal-content">
-                        <div id="closemodal" style="text-align:right">
+                    <div class="modal-content">
+                        <div id="close-add-modal" style="text-align:right">
                             <span class="glyphicon glyphicon-remove-circle"></span>
                         </div>
-                        <div>
-                            <form id="addFriendForm" role="form" method="get" action="/add">
-                                <!--FORM Start-->
-                                <h3>Add a Task</h3>
-                                <div class="form-group">
-                                    <label for="task">Task:</label>
-                                    <input required type="text" class="form-control" id="name" placeholder="Name" name="task">
-                                </div>
-                                <div class="form-group">
-                                    <label for="priority">Subject: </label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-                                </div>
-                                <div class="form-group">
-                                    <label for="due date">Due Date:</label>
-                                    <input type="text" class="flatpickr form-control" id="datepicker" placeholder="Due Date" name="dueDate">
-                                </div>
-                                <input type="submit" id="submitBtn" class="btn btn-default" value="Add task"></input>
-                            </form>
-                            <!--FORM END-->
-                        </div>
+                        <form id="addFriendForm" role="form" method="get" action="/add">
+                            <!--FORM Start-->
+                            <h3>Add a Task</h3>
+                            <div class="form-group">
+                                <label for="task">Task:</label>
+                                <input required type="text" class="form-control" id="name" placeholder="Name" name="task">
+                            </div>
+                            <div class="form-group">
+                                <label for="priority">Subject: </label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="due date">Due Date:</label>
+                                <input type="text" class="flatpickr form-control" id="datepicker" placeholder="Due Date" name="dueDate">
+                            </div>
+                            <input type="submit" id="submitBtn" class="btn btn-default" value="Add task"></input>
+                        </form>
+                        <!--FORM END--> 
                     </div>
                 </div>
             </div>
@@ -67,15 +109,13 @@
         <!-- ENDS OF TO DO MODULE -->
         <!--START OF DONE TASKS MODULE -->
         <h2> Done </h2>
-        <div id="donelist" class="panel panel-danger">
+        <div class="panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">Done</h3>
                 
             </div>
-            <div class="panel-body">
-                <div>
-                    <!-- <li class="list-group-item" style="text-decoration: line-through" data-style="button"> Task 1 <button class= "remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove-sign"></span></button></li>  -->
-                </div>
+            <div id="donelist" class="panel-body">
+                
             </div>
         </div>
     </div>

@@ -18,14 +18,16 @@ var profile = require('./routes/profile');
 
 var app = express();
 
+var taskData = require('./taskdata.json');
 
-app.locals.taskData = require('./taskdata.json');
 
+app.locals.taskData = taskData;
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'jade');
 
 app.set('views', path.join(__dirname, 'views'));
+app.set('taskData', taskData);
 app.set('view engine', 'handlebars');
 app.engine('.handlebars', exphbs({defaultLayout: 'main'}));
 
@@ -47,7 +49,7 @@ app.get('/', index.view);
 app.get('/tasks', tasks.view);
 // app.use('/feed', feed);
 
-app.post('/add', add.addTask);
+app.get('/add', add.addTask);
 
 app.get('/groups1', groups1.view);
 app.get('/feed', feed.view);
