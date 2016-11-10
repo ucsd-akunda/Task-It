@@ -21,6 +21,8 @@ data.indexData.topPerson = topPerson;
 
 // console.log(data);
 
+
+
 exports.view = function(req, res){
 	res.render('index', data.indexData);
 };

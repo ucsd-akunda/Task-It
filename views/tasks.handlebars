@@ -10,16 +10,20 @@
                 <div class="panel-body" id="appendHere">
                     <div id="testing">
                         {{#each taskData.cogs}}
-                        <li class="list-group-item" id="appendHere">
+                        <li class="list-group-item" id="grab">
                             <div class="element">
                                 <div class="task-name" style="display:inline-block">{{task}}</div>
                                 <div>Subject:</div>
                                 <div>{{subject}}</div>
                                 <div style="text-align:right">Due:</div>
                                 <div class="year" style="text-align:right">{{dueDate}}</div>
+                               
                             </div>
-                            <!--  <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle"></span></button>
-                            <button class="edit item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-edit"></span></button>-->
+                            <div class = "btn">
+                              <button class="check-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-ok-circle" >DONE</span></button>
+                          </div>
+                            <!-- <button class="edit item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-edit"></span></button>-->
+
                         </li>
                         {{/each}}
                     </div>
@@ -66,6 +70,7 @@
         <div id="donelist" class="panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">Done</h3>
+                
             </div>
             <div class="panel-body">
                 <div>

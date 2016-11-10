@@ -8,10 +8,27 @@ var closemodal = document.getElementById('closemodal');
 var donelist = document.getElementById('donelist');
 
 //$('.list-group-item').click(deleteItem);
-$('.testing').click(deleteItem);
+
+
+//searches for everyhing that in ID grab and grab whole thing it should move (append)
+//$(document).ready(function(){
+
+  //  $('#grab.list-group-item').appendTo('#donelist');
+//});
+
+//$('.list-group-item').click(deleteItem);
+
+
+$('.btn').click(function(){
+    $('.list-group-item').appendTo('#donelist');
+
+});
+
+
+
 
 function deleteItem(event) {
-    console.log(event);
+  //  console.log(event);
     // $(event.target).fadeOut();
     $(donelist).append(event.target);
 }

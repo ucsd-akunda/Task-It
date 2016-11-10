@@ -47,7 +47,7 @@ app.get('/', index.view);
 app.get('/tasks', tasks.view);
 // app.use('/feed', feed);
 
-app.get('/add', add.addTask);
+app.post('/add', add.addTask);
 
 app.get('/groups1', groups1.view);
 app.get('/feed', feed.view);

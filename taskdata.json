@@ -1,4 +1,11 @@
 {
     "subject": "Cogs 120",
-    "cogs": []
+    "cogs": [ {
+    	"task":"Read 12-16",
+    		"subject": "COGS 120",
+    		"dueDate": "11/9/16"
+
+    }
+    	
+    ]
 }
