@@ -1,6 +1,22 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
 
-<button type="button" class="btn btn-sm btn-primary" style="text-align: right;">Add Friend</button>
+<div>
+    <div style = "text-align:right">
+        <button type = "add-friend" class = "btn btn-default" id = "add-friend" >Add Friends</button>
+    </div>
+    <div id = "friend-modal" class = "modal">
+        <div class = "friend-modal-content">
+            <div id="closemodal" style = "text-align:right">
+                <span class="glyphicon glyphicon-remove-circle" ></span> 
+            </div>
+            <div id = "friend form">
+                <label class = "search"> Find Friends </label>
+                <input required type="text" class="form-control" id="search-friend" placeholder="username" name="search-friend">
+                <button class = "btn btn-default" id = "add"> Add </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <ul class="media-list">
     {{#each posts}}
