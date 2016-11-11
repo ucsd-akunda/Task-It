@@ -15,10 +15,13 @@ var groups1 = require('./routes/groups1');
 var feed = require('./routes/feed');
 var login = require('./routes/login');
 var profile = require('./routes/profile');
+var edit = require('./routes/edit');
 
 var app = express();
 
 var taskData = require('./taskdata.json');
+
+
 
 
 app.locals.taskData = taskData;
@@ -50,6 +53,8 @@ app.get('/tasks', tasks.view);
 // app.use('/feed', feed);
 
 app.get('/add', add.addTask);
+app.get('/edit', edit.editTask);
+
 
 app.get('/groups1', groups1.view);
 app.get('/feed', feed.view);
