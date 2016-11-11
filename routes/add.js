@@ -1,5 +1,10 @@
 exports.addTask = function(req, res) {
+
+	var array = req.app.get('taskData').cogs;
+
 	var newTask = {
+
+			"idx": array.length,
 
 			"task": req.query.task,
 
