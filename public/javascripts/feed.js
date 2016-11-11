@@ -3,6 +3,7 @@ if (typeof jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
+
     $('.post')
         .mouseover(function(e) {
             e.preventDefault();
@@ -10,7 +11,18 @@ $(document).ready(function() {
         })
         .mouseout(function(e) {
             $(this).css('border-left-color', '');
-        })
+    });
+
+    $('.like').click(function(e) {
+        $(this).toggleClass("active");
+        var score = +$(this).siblings('.score').html();
+        if ($(this).hasClass("active")) {
+            score += 1;
+        } else {
+            score -= 1;
+        }
+        $(this).siblings('.score').html(score.toString());
+    });
 
     var posttext = '<li class="post"> \
         <div class="post-person"> \
@@ -25,10 +37,12 @@ $(document).ready(function() {
             </p> \
             <a class="btn btn-xs btn-default"><span class="glyphicon glyphicon-thumbs-up"></span> Like!</a> \
         </div> \
-    </li>'
+    </li>';
+
+
     $(window).scroll(function() {
         if ($(document).height() <= $(window).scrollTop() + $(window).height()) {
-            $('#main-feed').append(posttext);
+            $('.media-list').append(posttext);
         }
     })
 })
