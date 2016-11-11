@@ -14,9 +14,9 @@
                <a href="/profile/jane"> <button class="btn btn-default" id="add">Search </button></a>
                 <div id="suggested-friends">
                     <label>People you might know</label>
-                    <ul class="media-list">
+            
                         {{#each unknown}}
-                        <li>
+                       <ul>
                             <div class="media-left">
                                 <a href="/profile/{{username}}">
                                     <img class="profile-avatar" src="{{profilepic}}">
@@ -28,9 +28,11 @@
                                     <button type="button" class="btn btn-primary friendreq" data-toggle="button" aria-pressed="false" autocomplete="off">Send Friend Request</button>
                                 </span>
                             </div>
-                        </li>
+                         </ul>
                         {{/each}}
-                    </ul>
+                
+                   
+
                 </div>
             </div>
         </div>
