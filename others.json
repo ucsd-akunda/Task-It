@@ -20,7 +20,7 @@
 		"username": "emily",
 		"name": "Emily Fry",
 		"text": "Ran 12 miles!",
-		"profilepic": "",
+		"profilepic": "/images/stock5.jpg",
 		"score": 210,
 		"todo": [
 			"emily todo1",
@@ -37,7 +37,7 @@
 		"username": "katie",
 		"name": "Katie Glass",
 		"text": "Completed 51 tasks!",				
-		"profilepic": "",
+		"profilepic": "/images/stock6.jpg",
 		"score": 360,
 		"todo": [
 			"katie todo1",

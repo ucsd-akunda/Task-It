@@ -4,7 +4,6 @@ var feed = require('../feed.json');
 
 var topPerson = {score: 0};
 
-
 // Write the callback function
 function handleFile(err, data) {
     if (err) throw err
