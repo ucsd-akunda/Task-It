@@ -15,12 +15,12 @@ var groups1 = require('./routes/groups1');
 var feed = require('./routes/feed');
 var login = require('./routes/login');
 var profile = require('./routes/profile');
-<<<<<<< HEAD
+
 var edit = require('./routes/edit');
-=======
+
 var loginSubmit = require('./routes/loginSubmit');
 var loginError = require('./routes/loginError');
->>>>>>> 31231ea9416a297081fe73176a2b18f9ce4323fb
+
 
 var app = express();
 
