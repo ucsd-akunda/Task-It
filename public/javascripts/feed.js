@@ -24,6 +24,11 @@ $(document).ready(function() {
         $(this).siblings('.score').html(score.toString());
     });
 
+    $('.friendreq').click(function() {
+        $(this).fadeOut();
+        alert("Friend request sent!");
+    });
+
     var posttext = '<li class="post"> \
         <div class="post-person"> \
             <a class="post-person-profilelink" href="javascript:void(0);"> \

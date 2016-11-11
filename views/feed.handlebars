@@ -1,9 +1,45 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
 
-<button type="button" class="btn btn-sm btn-primary" style="text-align: right;">Add Friend</button>
+<div>
+    <div style = "text-align:right">
+        <button type = "add-friend" class = "btn btn-default" id = "add-friend" >Add Friends</button>
+    </div>
+    <div id = "friend-modal" class = "modal">
+        <div class = "friend-modal-content">
+            <div id="closemodal" style = "text-align:right">
+                <span class="glyphicon glyphicon-remove-circle" ></span> 
+            </div>
+            <div id = "friend form">
+                <label class = "search"> Find Friends </label>
+                <input required type="text" class="form-control" id="search-friend" placeholder="username" name="search-friend">
+                <button class = "btn btn-default" id = "add"> <a href="javascript:void(0)">Add</a> </button>
+                <div id="suggested-friends">
+                    <label>People you might know</label>
+                    <ul class="media-list">
+                        {{#each unknown}}
+                        <li>
+                            <div class="media-left">
+                                <a href="/profile/{{username}}">
+                                    <img class="profile-avatar" src="{{profilepic}}">
+                                </a>
+                                <span>
+                                    <a href="/profile/{{username}}">
+                                        <strong>{{name}}</strong>
+                                    </a>
+                                    <button type="button" class="btn btn-primary friendreq" data-toggle="button" aria-pressed="false" autocomplete="off">Send Friend Request</button>
+                                </span>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <ul class="media-list">
-    {{#each posts}}
+    {{#each known.posts}}
     <li class="post">
         <div class="media-left">
             <a href="{{link}}">
