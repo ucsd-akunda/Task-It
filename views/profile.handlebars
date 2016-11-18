@@ -1,0 +1,49 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-3">
+
+            <div class="card testimonial-card">
+
+                <div class="card-up default-color-dark">
+                </div>
+
+                <div class="avatar"><img src={{profilepic}} class="rounded-circle img-responsive"></div>
+
+                <div class="card-block">
+                    <h4 class="card-title">{{name}}</h4>
+                    <hr>
+                    <p>Score: {{score}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="profile-content">
+                <div class="card">
+                    <div class="card-header primary-color white-text">To-Do</div>
+                    <ul class="list-group">
+                        {{#each todo}}
+                        <li class="list-group-item">
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="card ">
+                    <div class="card-header success-color white-text">Done</div>
+                    <ul class="list-group">
+                        {{#each complete}}
+                        <li class="list-group-item">
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
